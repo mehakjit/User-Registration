@@ -77,7 +77,7 @@ public class UserRegisteration {
 		for(int i = 0;i<1;) {	
 			System.out.println("Enter password of your choice: ");
 			String firstName = sc.nextLine();
-			Pattern pattern =Pattern.compile("^(?=.*[A-Z])(?=.*\\\\d)([a-zA-Z0-9]){8,}");
+			Pattern pattern =Pattern.compile("^(?=.*[A-Z])(?=.*[a-z])(?=.*\\d)(?=.*[@#$%]).{8,}");
 			Matcher matcher = pattern.matcher(firstName);
 			boolean matchfound = matcher.find();
 			if(matchfound) {
